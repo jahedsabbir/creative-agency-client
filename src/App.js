@@ -1,25 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { createContext, useState } from 'react';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './components/Home/Home/Home';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import ServiceList from './components/Dashboard/ServiceList/ServiceList';
+import Review from './components/Dashboard/Review/Review';
+import AddService from './components/Dashboard/AddService/AddService';
+import AllServiceList from './components/Dashboard/AllServiceList/AllServiceList';
+import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
+export const UserContext = createContext();
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <PrivateRoute  path="/dashboard">
+         <Dashboard></Dashboard>
+        </PrivateRoute>
+        <Route  path="/login">
+         <Login></Login>
+        </Route>
+        <Route  path="/servicelist">
+         <ServiceList></ServiceList>
+        </Route>
+        <Route  path="/review">
+         <Review></Review>
+        </Route>
+        <PrivateRoute  path="/allservicelist">
+         <AllServiceList></AllServiceList>
+        </PrivateRoute>
+        <Route  path="/addservice">
+         <AddService></AddService>
+        </Route>
+      </Switch>
+    </Router>
+    </UserContext.Provider>
   );
 }
 
