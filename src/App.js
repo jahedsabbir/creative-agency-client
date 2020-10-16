@@ -14,6 +14,7 @@ import AddService from './components/Dashboard/AddService/AddService';
 import AllServiceList from './components/Dashboard/AllServiceList/AllServiceList';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import MakeAdmin from './components/Dashboard/MakeAdmin/MakeAdmin';
 
 export const UserContext = createContext();
 function App() {
@@ -36,6 +37,9 @@ function App() {
         </Route>
         <Route  path="/review">
          <Review></Review>
+        </Route>
+        <Route  path="/makeadmin">
+         <MakeAdmin></MakeAdmin>
         </Route>
         <PrivateRoute  path="/allservicelist">
          <AllServiceList></AllServiceList>

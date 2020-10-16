@@ -4,7 +4,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const AddService = () => {
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/addService',{
+        fetch('https://young-ravine-01690.herokuapp.com/addService',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

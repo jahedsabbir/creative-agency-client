@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 const Order = () => {
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/addOrder',{
+        fetch('https://young-ravine-01690.herokuapp.com/addOrder',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

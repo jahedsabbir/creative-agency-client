@@ -4,7 +4,7 @@ import Sidebar from '../Sidebar/Sidebar';
 const AllServiceList = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://young-ravine-01690.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setOrders(data));
     }, []);
@@ -13,7 +13,7 @@ const AllServiceList = () => {
            <div className="col-md-2">
            <Sidebar></Sidebar>
            </div>
-           <div className="col-md-8">
+           <div className="col-md-8 col-sm-12 col-12">
              <table className="table table-borderless">
             <thead>
                 <tr>
