@@ -1,4 +1,6 @@
-Creative-Agency
+CREATIVE-AGENCY
+
+
 Creative-Agency is an multiple pages full functional website. Users can order courses and send feedback if they wish. Admin can add and delete courses in this website.
 
 
@@ -15,32 +17,32 @@ Live Website: https://creativeagency-d74a5.web.app/
 
 Features : 
 
-            •	Order course from the services
+            -> Order course from the services
 
-            •	Users have to sign up on the personal page
+            -> Users have to sign up on the personal page
 
-            •	Admin Dashboard available
+            -> Admin Dashboard available
 
 
 
 Front-end Technology :
 
-                •	React.js
+             -> React.js
 
-                •	Bootstrap4 
+             -> Bootstrap4 
 
-                •	CSS3
+             -> CSS3
 
 
 
 Backend Technology : 
 
-                •	Node.js 
+            -> Node.js 
 
-                •	Express.js 
+            -> Express.js 
 
-                •	MongoDB
+            -> MongoDB
 
-                •	Firebase Authentication 
+            -> Firebase Authentication 
 
-                •	Heroku
+            -> Heroku
