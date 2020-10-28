@@ -14,22 +14,33 @@ Live Website: https://creativeagency-d74a5.web.app/
 
 
 Features : 
+
 •	Order course from the services
+
 •	Users have to sign up on the personal page
+
 •	Admin Dashboard available
 
 
 
 Front-end Technology :
+
 •	React.js
+
 •	Bootstrap4 
+
 •	CSS3
 
 
 
 Backend Technology : 
+
 •	Node.js 
+
 •	Express.js 
+
 •	MongoDB
+
 •	Firebase Authentication 
+
 •	Heroku
